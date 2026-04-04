@@ -1,338 +1,349 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nguyen Dat Tho | Embedded Linux Developer</title>
-    <style>
-      :root {
-        --bg: #f8f6f1;
-        --paper: #fffefb;
-        --ink: #1d1d1d;
-        --muted: #5f5f5f;
-        --line: #dad4c8;
-        --accent: #8e3d2f;
-      }
 
-      * {
-        box-sizing: border-box;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyen Dat Tho | Embedded Linux Developer</title>
+  <style>
+    :root {
+      --bg: #f8f6f1;
+      --paper: #fffefb;
+      --ink: #1d1d1d;
+      --muted: #5f5f5f;
+      --line: #dad4c8;
+      --accent: #8e3d2f;
+    }
 
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        background: radial-gradient(circle at 20% 0%, #fff, var(--bg) 58%);
-        color: var(--ink);
-        font-family: Georgia, "Times New Roman", serif;
-      }
+    * {
+      box-sizing: border-box;
+    }
 
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at 20% 0%, #fff, var(--bg) 58%);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 36px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(18, 12, 4, 0.06);
+    }
+
+    .hero {
+      padding: 28px 36px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .hero-photo {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .role {
+      margin: 6px 0 0;
+      font-size: 1.02rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contacts {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.6;
+    }
+
+    .contacts a {
+      color: var(--ink);
+    }
+
+    .tagline {
+      margin: 10px 0 0;
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+    }
+
+    .main {
+      padding: 20px 36px 34px;
+    }
+
+    .side {
+      padding: 20px 30px 34px;
+      border-left: 1px solid var(--line);
+      background: linear-gradient(180deg, #fffefb 0%, #f9f7f2 100%);
+    }
+
+    h2 {
+      margin: 22px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0 0 10px;
+      line-height: 1.58;
+    }
+
+    .item {
+      margin: 0 0 16px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .item-header strong {
+      display: block;
+    }
+
+    .item-header span {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 0 0 6px;
+      line-height: 1.48;
+    }
+
+    .skill-block {
+      margin: 0 0 14px;
+    }
+
+    .skill-block h3 {
+      margin: 0 0 5px;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 12px 36px 18px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 840px) {
       .page {
-        max-width: 980px;
-        margin: 36px auto;
-        background: var(--paper);
-        border: 1px solid var(--line);
-        box-shadow: 0 18px 40px rgba(18, 12, 4, 0.06);
-      }
-
-      .hero {
-        padding: 28px 36px 18px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .hero-inner {
-        display: grid;
-        grid-template-columns: 132px 1fr;
-        gap: 18px;
-        align-items: center;
-      }
-
-      .hero-photo {
-        width: 132px;
-        height: 132px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 1px solid var(--line);
-      }
-
-      h1 {
         margin: 0;
-        font-size: 2.25rem;
-        letter-spacing: 0.02em;
+        border-left: 0;
+        border-right: 0;
       }
-
-      .role {
-        margin: 6px 0 0;
-        font-size: 1.02rem;
-        color: var(--accent);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .contacts {
-        margin-top: 14px;
-        color: var(--muted);
-        font-size: 0.97rem;
-        line-height: 1.6;
-      }
-
-      .contacts a {
-        color: var(--ink);
-      }
-
 
       .layout {
-        display: grid;
-        grid-template-columns: 1.55fr 1fr;
-      }
-
-      .main {
-        padding: 20px 36px 34px;
+        grid-template-columns: 1fr;
       }
 
       .side {
-        padding: 20px 30px 34px;
-        border-left: 1px solid var(--line);
-        background: linear-gradient(180deg, #fffefb 0%, #f9f7f2 100%);
-      }
-
-      h2 {
-        margin: 22px 0 8px;
-        font-size: 1.05rem;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      p {
-        margin: 0 0 10px;
-        line-height: 1.58;
-      }
-
-      .item {
-        margin: 0 0 16px;
-      }
-
-      .item-header {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        font-size: 0.98rem;
-        margin-bottom: 6px;
-      }
-
-      .item-header strong {
-        display: block;
-      }
-
-      .item-header span {
-        color: var(--muted);
-        white-space: nowrap;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 18px;
-      }
-
-      li {
-        margin: 0 0 6px;
-        line-height: 1.48;
-      }
-
-      .skill-block {
-        margin: 0 0 14px;
-      }
-
-      .skill-block h3 {
-        margin: 0 0 5px;
-        font-size: 0.95rem;
-        letter-spacing: 0.03em;
-      }
-
-      .muted {
-        color: var(--muted);
-      }
-
-      .footer {
+        border-left: 0;
         border-top: 1px solid var(--line);
-        padding: 12px 36px 18px;
-        color: var(--muted);
-        font-size: 0.86rem;
       }
 
-      @media (max-width: 840px) {
-        .page {
-          margin: 0;
-          border-left: 0;
-          border-right: 0;
-        }
-
-        .layout {
-          grid-template-columns: 1fr;
-        }
-
-        .side {
-          border-left: 0;
-          border-top: 1px solid var(--line);
-        }
-
-        .hero,
-        .main,
-        .side,
-        .footer {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .hero-inner {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-
-        .hero-photo {
-          margin: 0 auto;
-          width: 120px;
-          height: 120px;
-        }
+      .hero,
+      .main,
+      .side,
+      .footer {
+        padding-left: 20px;
+        padding-right: 20px;
       }
-    </style>
-  </head>
-  <body>
-    <div class="page">
-      <header class="hero">
-        <div class="hero-inner">
-          <img class="hero-photo" src="./my.jpg" alt="Portrait of Nguyen Dat Tho" />
-          <div>
-            <h1>Nguyen Dat Tho</h1>
-            <p class="role">Embedded Linux Developer</p>
-            <div class="contacts">
-              323/83 Xuan Dinh, Ha Noi<br />
-              Phone: (+84) 37-312-4823 | Email:
-              <a href="mailto:thond2009@gmail.com">thond2009@gmail.com</a>
-            </div>
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-photo {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <img class="hero-photo" src="./my.jpg" alt="Portrait of Nguyen Dat Tho" />
+        <div>
+          <h1>Nguyen Dat Tho</h1>
+          <p class="role">Embedded Linux Developer</p>
+          <div class="contacts">
+            323/83 Xuan Dinh, Ha Noi<br />
+            Phone: (+84) 37-312-4823 | Email:
+            <a href="mailto:thond2009@gmail.com">thond2009@gmail.com</a>
           </div>
+          <p class="tagline"><em>&#x201C;Building reliable embedded Linux systems from development to deployment.&#x201D;</em></p>
         </div>
-      </header>
-
-      <div class="layout">
-        <main class="main">
-          <h2>Summary</h2>
-          <p>
-            Embedded Linux Developer with 9+ years of experience designing and maintaining
-            industrial-grade Linux distributions and platform software.
-          </p>
-          <p>
-            Strong expertise in Yocto Project, Linux kernel and boot stack troubleshooting,
-            CI/CD automation, and hardware-in-the-loop validation.
-          </p>
-          <p>
-            Focused on reliable, maintainable, and secure embedded software with efficient
-            development workflows.
-          </p>
-
-          <h2>Work Experience</h2>
-
-          <div class="item">
-            <div class="item-header">
-              <strong>LG Electronics Development Vietnam (LGEDV) - webOS & Atlas</strong>
-              <span>Sep 2024 - Present</span>
-            </div>
-            <ul>
-              <li>Manage end-to-end SCM lifecycle with Jenkins, Gerrit, and Grafana.</li>
-              <li>Review and approve Yocto layers/recipes for mainline integration.</li>
-              <li>Optimize Yocto-based environments with ccache and sstate-cache.</li>
-              <li>Bring up new hardware: QCS6490, NVidia Orin, and DQ1.</li>
-              <li>Contribute upstream to OpenEmbedded and Yocto community layers.</li>
-              <li>Implement CVE and license monitoring with Fosslight and CVE tracker.</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <div class="item-header">
-              <strong>Toshiba Software Development Vietnam - Toshiba Linux OS (new generation)</strong>
-              <span>Apr 2022 - Aug 2024</span>
-            </div>
-            <ul>
-              <li>Built modular Linux distributions using Debos.</li>
-              <li>Automated open-source license compliance with Fossology.</li>
-              <li>Architected containerized CI/CD pipelines with GitLab CI and Docker.</li>
-              <li>Integrated SWUpdate for secure fail-safe OTA update workflows.</li>
-              <li>Delivered reproducible builds and led Debian stable transitions.</li>
-              <li>Contributed to CIP collaboration with Renesas and Siemens.</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <div class="item-header">
-              <strong>Toshiba Software Development Vietnam - Toshiba Skerlet OS</strong>
-              <span>Apr 2018 - Mar 2022</span>
-            </div>
-            <ul>
-              <li>Developed production Linux OS using Yocto Morty and meta-debian.</li>
-              <li>Implemented hardware validation with LAVA and Fuego.</li>
-              <li>Resolved bootloader and kernel issues on multiple embedded boards.</li>
-              <li>Investigated and fixed security vulnerabilities (CVEs).</li>
-            </ul>
-          </div>
-
-          <div class="item">
-            <div class="item-header">
-              <strong>Toshiba Software Development Vietnam - NV Series industrial computer</strong>
-              <span>Jan 2015 - Mar 2018</span>
-            </div>
-            <ul>
-              <li>Migrated legacy C applications from 32-bit to 64-bit architecture.</li>
-              <li>Customized Debian-based Yocto distributions for industrial reliability.</li>
-              <li>Engineered automated testing framework using Fuego.</li>
-              <li>Applied QEMU-KVM with hardware binding for high-performance workloads.</li>
-            </ul>
-          </div>
-        </main>
-
-        <aside class="side">
-          <h2>Skills</h2>
-
-          <div class="skill-block">
-            <h3>Core Embedded Linux</h3>
-            <p class="muted">Kernel development, Yocto Project, Debos, meta-debian, KAS, SWUpdate, OTA updates.</p>
-          </div>
-
-          <div class="skill-block">
-            <h3>Languages</h3>
-            <p class="muted">C, C++, Python, Bash, Go, YAML, CMake.</p>
-          </div>
-
-          <div class="skill-block">
-            <h3>Build and DevOps</h3>
-            <p class="muted">Jenkins, Gerrit, GitLab CI, Docker, Grafana, Git, Fossology.</p>
-          </div>
-
-          <div class="skill-block">
-            <h3>Platforms</h3>
-            <p class="muted">BeagleBone Black, Raspberry Pi, QCS6490, NVidia Orin, DQ1, Debian, Ubuntu, Zephyr, ROS.</p>
-          </div>
-
-          <div class="skill-block">
-            <h3>Testing</h3>
-            <p class="muted">Fuego, LAVA, automated hardware-in-the-loop testing.</p>
-          </div>
-
-          <h2>Contributions</h2>
-          <p>
-            <a href="https://git.openembedded.org/openembedded-core/log/?qt=grep&amp;q=tho3.nguyen&amp;h=scarthgap" target="_blank" rel="noopener">
-              openembedded-core commits (scarthgap)
-            </a>
-          </p>
-          <p>
-            <a href="https://git.openembedded.org/meta-openembedded/log/?qt=grep&amp;q=tho3.nguyen" target="_blank" rel="noopener">
-              meta-openembedded commits
-            </a>
-          </p>
-
-        </aside>
       </div>
+    </header>
 
-      <footer class="footer">Last updated: April 3, 2026</footer>
+    <div class="layout">
+      <main class="main">
+        <h2>Summary</h2>
+        <p>
+          Embedded Linux Developer with 9+ years of experience designing and maintaining industrial-grade
+          Linux distributions and platform software. Strong hands-on expertise in Yocto Project, Linux kernel
+          and boot stack troubleshooting, CI/CD automation, and hardware-in-the-loop validation.
+        </p>
+        <p>
+          Proven track record delivering production systems for long-lifecycle products, including OTA update
+          integration, reproducible builds, and Debian stable transitions. Focused on building reliable,
+          maintainable, and secure embedded software with efficient development workflows.
+        </p>
+
+        <h2>Work Experience</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <strong>LG Electronics Development Vietnam (LGEDV) &mdash; Senior Software Engineer | webOS &amp; Atlas</strong>
+            <span>Sep 2024 &ndash; Present</span>
+          </div>
+          <ul>
+            <li>Managing the end-to-end SCM lifecycle for LG&#x2019;s next-generation platform, leveraging Jenkins, Gerrit, and Grafana.</li>
+            <li>Reviewing and approving Yocto layers and recipes changes for integrating new features into the mainline build.</li>
+            <li>Developing and optimizing Yocto-based build environments for high-performance Linux distributions (ccache, sstate-cache).</li>
+            <li>Bring-up and integration of new hardware platforms into the Yocto build system (QCS6490, NVidia Orin, DQ1).</li>
+            <li>Actively contributing technical improvements to the Yocto Project and OpenEmbedded upstream repositories (openembedded-core, meta-openembedded).</li>
+            <li>Implementing CVE &amp; license system to monitor and manage security vulnerabilities and compliance (Fosslight and CVE Tracker).</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <strong>Toshiba Software Development Vietnam (TSDV) &mdash; Senior Software Engineer | Toshiba Linux OS (New Generation)</strong>
+            <span>Apr 2022 &ndash; Aug 2024</span>
+          </div>
+          <ul>
+            <li>Developed and maintained modular Linux OS distributions using the Debos build tool.</li>
+            <li>Deployed Fossology to automate the management of open-source licenses and ensure compliance across the organization.</li>
+            <li>Architected containerized CI/CD pipelines using GitLab CI and Docker for cross-project efficiency.</li>
+            <li>Contributed to the CIP (Civil Infrastructure Platform) project, collaborating with Renesas and Siemens on long-term OS maintenance.</li>
+            <li>Innovated product features by integrating SWUpdate for secure, fail-safe OTA updates and implementing reproducible builds.</li>
+            <li>Managed the full-cycle transition of Linux OS distributions to newer Debian stable releases (e.g., Buster&rarr;Bullseye, Bullseye&rarr;Bookworm).</li>
+            <li>Explored and benchmarked WebAssembly (WASM) runtimes across Ubuntu, Debian, Zephyr, and ROS.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <strong>Toshiba Software Development Vietnam (TSDV) &mdash; Senior Software Engineer | Toshiba Skerlet OS</strong>
+            <span>Apr 2018 &ndash; Mar 2022</span>
+          </div>
+          <ul>
+            <li>Developed and maintained production-grade Linux OS using Yocto (Morty) and meta-debian.</li>
+            <li>Implemented automated hardware testing by deploying LAVA and Fuego, significantly reducing manual validation effort.</li>
+            <li>Resolved complex bootloader and kernel issues on diverse embedded platforms, including BeagleBone Black and Raspberry Pi.</li>
+            <li>Investigated and fixed several CVEs (Common Vulnerabilities and Exposures) to enhance system security.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <strong>Toshiba Software Development Vietnam (TSDV) &mdash; Software Engineer | NV Series Industrial Computer</strong>
+            <span>Jan 2015 &ndash; Mar 2018</span>
+          </div>
+          <ul>
+            <li>Architected the migration of legacy C applications from 32-bit to 64-bit architecture, ensuring seamless compatibility and performance gains.</li>
+            <li>Customized and optimized Debian-based distributions using Yocto, satisfying strict industrial reliability requirements.</li>
+            <li>Engineered an automated testing framework using Fuego to ensure rapid and reliable delivery of OS updates.</li>
+            <li>Applied QEMU-KVM virtualization with hardware binding to maximize performance for specialized industrial workloads.</li>
+          </ul>
+        </div>
+      </main>
+
+      <aside class="side">
+        <h2>Skills</h2>
+
+        <div class="skill-block">
+          <h3>Core Embedded Linux</h3>
+          <p class="muted">Kernel development, Yocto Project, Debos, meta-debian, KAS, SWUpdate, OTA updates.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3>Languages</h3>
+          <p class="muted">C, C++, Python, Bash, Go, YAML, CMake.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3>Build and DevOps</h3>
+          <p class="muted">Jenkins, Gerrit, GitLab CI, Docker, Grafana, Git, Fossology.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3>Platforms</h3>
+          <p class="muted">BeagleBone Black, Raspberry Pi, QCS6490, NVidia Orin, DQ1, Debian, Ubuntu, Zephyr, ROS.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3>Testing</h3>
+          <p class="muted">Fuego, LAVA, automated hardware-in-the-loop testing.</p>
+        </div>
+
+        <h2>Contributions</h2>
+        <p>
+          <a href="https://git.openembedded.org/openembedded-core/log/?qt=grep&amp;q=tho3.nguyen&amp;h=scarthgap"
+            target="_blank" rel="noopener">
+            openembedded-core commits (scarthgap)
+          </a>
+        </p>
+        <p>
+          <a href="https://git.openembedded.org/meta-openembedded/log/?qt=grep&amp;q=tho3.nguyen" target="_blank"
+            rel="noopener">
+            meta-openembedded commits
+          </a>
+        </p>
+
+      </aside>
     </div>
-  </body>
+
+    <footer class="footer">Last updated: April 4, 2026</footer>
+  </div>
+</body>
+
 </html>
