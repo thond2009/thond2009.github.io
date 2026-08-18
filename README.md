@@ -1,9 +1,14 @@
 # thond2009.github.io
 
-Simple GitHub Pages site to publish a resume PDF.
+Personal resume / portfolio site hosted on GitHub Pages.
 
-## How to update the CV
+## How to update
 
-1. Replace `resume.pdf` in the repository root.
-2. Commit and push to `main`.
-3. GitHub Pages will redeploy automatically via Actions.
+1. Edit `index.html` (the whole site is a single self-contained page).
+2. To refresh the downloadable CV, replace `Nguyen Dat Tho CV 2026.pdf` in the
+   repository root (make sure it is tracked by git).
+3. Commit and push to `main`.
+4. GitHub Pages redeploys automatically via Actions.
+
+The page supports light/dark mode (toggle in the navbar, saved in
+`localStorage`) and prints cleanly to PDF via the browser print dialog.
