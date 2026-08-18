@@ -1,0 +1,9 @@
+# Local editor/tooling
+.cursor/
+.idea/
+.vscode/
+*.swp
+
+# Build output
+_site/
+.jekyll-cache/
